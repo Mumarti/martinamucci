@@ -1,5 +1,7 @@
-$light-color: #f4f4f4;
-$font-stack: Arial, Helvetica, sans-serif;
+@import "config";
+html {
+  scroll-behavior: smooth;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,7 +9,12 @@ $font-stack: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background-color: $light-color;
-  font-family: $font-stack;
-  line-height: 1.6;
+  background-color: $grigio-chiaro;
+  font-family: $font;
 }
+
+section {
+  height: 100vh;
+}
+
+@import "navmenu";

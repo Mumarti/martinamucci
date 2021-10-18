@@ -1,0 +1,40 @@
+.nav {
+  padding: $nav-gap;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-bottom: $nav-gap;
+
+    .nav-link {
+      background: $verde-acqua;
+      opacity: 0.3;
+      border-radius: 50%;
+      height: 15px;
+      width: 15px;
+      margin-left: $nav-gap;
+    }
+
+    .nav-link:hover ~ .nav-label {
+      opacity: 1;
+    }
+
+    .nav-link-selected {
+      background: $cobalto;
+      opacity: 1;
+      transform: scale(1.4);
+    }
+
+    .nav-label {
+      color: $cobalto;
+      font-weight: 400;
+      opacity: 0;
+      transition: opacity 0.1s;
+    }
+  }
+}
