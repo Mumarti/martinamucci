@@ -12,7 +12,7 @@
     margin-bottom: $nav-gap;
 
     .nav-link {
-      background: $verde-acqua;
+      background: $rosso-salmone;
       opacity: 0.3;
       border-radius: 50%;
       height: 15px;
@@ -25,13 +25,13 @@
     }
 
     .nav-link-selected {
-      background: $cobalto;
+      background: $rosso-salmone;
       opacity: 1;
       transform: scale(1.4);
     }
 
     .nav-label {
-      color: $cobalto;
+      color: $rosso-salmone;
       font-weight: 400;
       opacity: 0;
       transition: opacity 0.1s;

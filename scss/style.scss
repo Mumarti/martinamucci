@@ -9,12 +9,42 @@ html {
 }
 
 body {
-  background-color: $grigio-chiaro;
+  background-color: $pesca-chiaro;
   font-family: $font;
 }
 
 section {
   height: 100vh;
+}
+
+.left {
+  float: left;
+  width: 50%;
+  height: 100vh;
+  padding-top: 130px;
+}
+.right {
+  float: right;
+  width: 50%;
+  height: 100vh;
+}
+
+.hello {
+  margin-left: 60px;
+  padding-left: 0;
+  color: $cobalto;
+  font-size: 8vw;
+  line-height: 7vw;
+}
+
+.description {
+  margin-left: 60px;
+  padding-top: 40px;
+  padding-right: 100px;
+  padding-left: 0;
+  font-size: 16px;
+  line-height: 32px;
+  color: $grigio-scuro;
 }
 
 @import "navmenu";
