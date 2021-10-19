@@ -1,0 +1,94 @@
+.skills-bar {
+  display: grid;
+  place-items: center;
+  padding: 15px 0;
+
+  .bar {
+    width: 600px;
+    padding: 20px 0;
+
+    .info {
+      margin-bottom: 5px;
+
+      span {
+        font-size: 17px;
+        font-weight: 500;
+        color: $grigio-scuro;
+      }
+    }
+    .progress-line {
+      position: relative;
+      height: 10px;
+      width: 100%;
+      background-color: $bianco;
+      border-radius: 10px;
+
+      span {
+        position: absolute;
+        height: 100%;
+        width: 80%;
+        background-color: $cobalto;
+        border-radius: 10px;
+      }
+
+      span::after {
+        position: absolute;
+        content: "80%";
+        right: 0;
+        top: -20px;
+        color: $grigio-scuro;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+    .html-css {
+      span {
+        width: 80%;
+      }
+      span::after {
+        content: "80%";
+      }
+    }
+    .php-mysql {
+      span {
+        width: 70%;
+      }
+      span::after {
+        content: "70%";
+      }
+    }
+    .js {
+      span {
+        width: 50%;
+      }
+      span::after {
+        content: "50%";
+      }
+    }
+    .wordpress {
+      span {
+        width: 70%;
+      }
+      span::after {
+        content: "70%";
+      }
+    }
+    .bootstrap {
+      span {
+        width: 90%;
+      }
+      span::after {
+        content: "90%";
+      }
+    }
+    .laravel {
+      span {
+        width: 30%;
+      }
+      span::after {
+        content: "30%";
+      }
+    }
+  }
+}

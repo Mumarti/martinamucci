@@ -17,11 +17,37 @@ section {
   height: 100vh;
 }
 
+h1 {
+  color: $cobalto;
+  font-size: 8vw;
+  line-height: 7vw;
+}
+h2 {
+  color: $bianco;
+  font-size: 4vw;
+  line-height: 4vw;
+}
+h3 {
+  color: $bianco;
+  font-size: 3vw;
+  line-height: 4vw;
+}
+h4 {
+  color: $bianco;
+  font-size: 2vw;
+  line-height: 4vw;
+}
+
 .left {
   float: left;
   width: 50%;
   height: 100vh;
-  padding-top: 130px;
+
+  .presentation {
+    padding-top: 130px;
+    margin-left: 60px;
+    padding-left: 0;
+  }
 }
 .right {
   float: right;
@@ -29,23 +55,25 @@ section {
   height: 100vh;
 }
 
-.hello {
-  margin-left: 60px;
-  padding-left: 0;
-  color: $cobalto;
-  font-size: 8vw;
-  line-height: 7vw;
-}
-
 .description {
-  margin-left: 60px;
+  padding-left: 60px;
   padding-top: 40px;
   padding-right: 100px;
-  padding-left: 0;
   font-size: 16px;
   line-height: 32px;
   color: $grigio-scuro;
 }
 
+.data {
+  width: 30%;
+  padding: 60px;
+}
+.event {
+  width: 70%;
+  padding: 60px;
+}
+
 @import "navmenu";
+@import "timeline";
+@import "skills";
 @import "mobile";
