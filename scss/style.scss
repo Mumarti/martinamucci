@@ -43,16 +43,28 @@ h4 {
   width: 50%;
   height: 100vh;
 
+  h3 {
+    padding-left: 80px;
+  }
+
   .presentation {
     padding-top: 130px;
     margin-left: 60px;
     padding-left: 0;
+
+    h3 {
+      padding-left: 0;
+    }
   }
 }
 .right {
   float: right;
   width: 50%;
   height: 100vh;
+
+  h3 {
+    padding-left: 80px;
+  }
 }
 
 .description {

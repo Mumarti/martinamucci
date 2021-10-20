@@ -1,3 +1,4 @@
+//Hard skills
 .skills-bar {
   display: grid;
   place-items: center;
@@ -88,6 +89,68 @@
       }
       span::after {
         content: "30%";
+      }
+    }
+  }
+}
+
+//Soft Skills
+.soft-skills-bar {
+  display: grid;
+  place-items: left;
+  padding: 15px 80px;
+  .wrapper {
+    display: flex;
+
+    .static-txt {
+      color: $bianco;
+      font-size: 60px;
+      font-weight: 400;
+      padding-top: 9px;
+    }
+    .dynamic-txts {
+      margin-left: 15px;
+      height: 90px;
+      line-height: 90px;
+      overflow: hidden;
+      li {
+        list-style: none;
+        color: $cobalto;
+        font-size: 60px;
+        font-weight: 500;
+        position: relative;
+        top: 0;
+        animation: slide 12s steps(4) infinite;
+
+        span {
+          position: relative;
+          margin: 5px 0;
+          line-height: 90px;
+        }
+        span::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          height: 90px;
+          width: 100%;
+          background: $pesca-chiaro;
+          border-left: 2px solid $cobalto;
+          animation: typing 3s steps(11) infinite;
+        }
+        @keyframes typing {
+          40%,
+          60% {
+            left: calc(100% + 30px);
+          }
+          100% {
+            left: 0;
+          }
+        }
+      }
+      @keyframes slide {
+        100% {
+          top: -360px;
+        }
       }
     }
   }
