@@ -1,157 +1,236 @@
-//Hard skills
-.skills-bar {
-  display: grid;
-  place-items: center;
-  padding: 15px 0;
+// //Hard skills
+// .skills-bar {
+//   display: grid;
+//   place-items: center;
+//   padding: 15px 0;
 
-  .bar {
-    width: 600px;
-    padding: 20px 0;
+//   .bar {
+//     width: 600px;
+//     padding: 20px 0;
 
-    .info {
-      margin-bottom: 5px;
+//     .info {
+//       margin-bottom: 5px;
 
-      span {
-        font-size: 17px;
-        font-weight: 500;
-        color: $grigio-scuro;
-      }
-    }
-    .progress-line {
-      position: relative;
-      height: 10px;
-      width: 100%;
-      background-color: $bianco;
-      border-radius: 10px;
+//       span {
+//         font-size: 17px;
+//         font-weight: 500;
+//         color: $grigio-scuro;
+//       }
+//     }
+//     .progress-line {
+//       position: relative;
+//       height: 10px;
+//       width: 100%;
+//       background-color: $bianco;
+//       border-radius: 10px;
 
-      span {
-        position: absolute;
-        height: 100%;
-        width: 80%;
-        background-color: $cobalto;
-        border-radius: 10px;
-      }
+//       span {
+//         position: absolute;
+//         height: 100%;
+//         width: 80%;
+//         background-color: $cobalto;
+//         border-radius: 10px;
+//       }
 
-      span::after {
-        position: absolute;
-        content: "80%";
-        right: 0;
-        top: -20px;
-        color: $grigio-scuro;
-        font-size: 14px;
-        font-weight: 500;
-      }
-    }
+//       span::after {
+//         position: absolute;
+//         content: "80%";
+//         right: 0;
+//         top: -20px;
+//         color: $grigio-scuro;
+//         font-size: 14px;
+//         font-weight: 500;
+//       }
+//     }
 
-    .html-css {
-      span {
-        width: 80%;
-      }
-      span::after {
-        content: "80%";
-      }
+//     .html-css {
+//       span {
+//         width: 80%;
+//       }
+//       span::after {
+//         content: "80%";
+//       }
+//     }
+//     .php-mysql {
+//       span {
+//         width: 70%;
+//       }
+//       span::after {
+//         content: "70%";
+//       }
+//     }
+//     .js {
+//       span {
+//         width: 50%;
+//       }
+//       span::after {
+//         content: "50%";
+//       }
+//     }
+//     .wordpress {
+//       span {
+//         width: 70%;
+//       }
+//       span::after {
+//         content: "70%";
+//       }
+//     }
+//     .bootstrap {
+//       span {
+//         width: 90%;
+//       }
+//       span::after {
+//         content: "90%";
+//       }
+//     }
+//     .laravel {
+//       span {
+//         width: 30%;
+//       }
+//       span::after {
+//         content: "30%";
+//       }
+//     }
+//   }
+// }
+.container {
+  overflow-x: hidden;
+}
+.slides {
+  height: 80vh;
+  width: 100vw;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+
+  // background-color: royalblue;
+
+  position: absolute;
+
+  z-index: 2;
+
+  background-position: center;
+  background-size: cover;
+
+  &:first-child {
+    @include bg(tomato);
+
+    .btn {
+      background-color: gold;
     }
-    .php-mysql {
-      span {
-        width: 70%;
-      }
-      span::after {
-        content: "70%";
-      }
+  }
+
+  &:nth-child(2) {
+    @include bg(gold);
+
+    .btn {
+      background-color: royalblue;
     }
-    .js {
-      span {
-        width: 50%;
-      }
-      span::after {
-        content: "50%";
-      }
+  }
+
+  &:nth-child(3) {
+    @include bg(royalblue);
+
+    .btn {
+      background-color: tomato;
     }
-    .wordpress {
-      span {
-        width: 70%;
-      }
-      span::after {
-        content: "70%";
-      }
-    }
-    .bootstrap {
-      span {
-        width: 90%;
-      }
-      span::after {
-        content: "90%";
-      }
-    }
-    .laravel {
-      span {
-        width: 30%;
-      }
-      span::after {
-        content: "30%";
-      }
+  }
+
+  &.visible {
+    z-index: 5;
+    animation: clipperino 1s ease forwards;
+
+    .btn {
+      transform: translateY(-50%) scale(1);
     }
   }
 }
 
-//Soft Skills
-.soft-skills-bar {
-  display: grid;
-  place-items: left;
-  padding: 15px 80px;
-  .wrapper {
-    display: flex;
-
-    .static-txt {
-      color: $bianco;
-      font-size: 60px;
-      font-weight: 400;
-      padding-top: 9px;
-    }
-    .dynamic-txts {
-      margin-left: 15px;
-      height: 90px;
-      line-height: 90px;
-      overflow: hidden;
-      li {
-        list-style: none;
-        color: $cobalto;
-        font-size: 60px;
-        font-weight: 500;
-        position: relative;
-        top: 0;
-        animation: slide 12s steps(4) infinite;
-
-        span {
-          position: relative;
-          margin: 5px 0;
-          line-height: 90px;
-        }
-        span::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          height: 90px;
-          width: 100%;
-          background: $pesca-chiaro;
-          border-left: 2px solid $cobalto;
-          animation: typing 3s steps(11) infinite;
-        }
-        @keyframes typing {
-          40%,
-          60% {
-            left: calc(100% + 30px);
-          }
-          100% {
-            left: 0;
-          }
-        }
-      }
-      @keyframes slide {
-        100% {
-          top: -360px;
-        }
-      }
-    }
+@keyframes clipperino {
+  from {
+    clip-path: circle(1.5rem at calc(100% - 3.5rem));
   }
+
+  to {
+    clip-path: circle(2000px at calc(100% - 3.5rem));
+  }
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+
+  width: 3rem;
+  height: 3rem;
+
+  transform: translateY(-50%);
+  // transition: all .3s ease;
+
+  cursor: pointer;
+
+  background-color: tomato;
+
+  border-radius: 3rem;
+
+  color: white;
+
+  text-align: center;
+
+  line-height: 3rem;
+
+  font-size: 1.5em;
+
+  &:active {
+    transform: translateY(-50%) scale(0.9) !important;
+  }
+}
+
+.slide__text {
+  color: white;
+  position: absolute;
+  bottom: 20%;
+  left: 3rem;
+
+  font-size: 4rem;
+  line-height: 0.9em;
+
+  display: inline-block;
+
+  text-transform: uppercase;
+
+  font-weight: bold;
+
+  width: 200px;
+}
+
+// presentation
+.logo {
+  width: 100px;
+  height: 2em;
+
+  background-color: white;
+
+  position: absolute;
+
+  top: 2rem;
+  left: 3rem;
+
+  z-index: 10;
+}
+
+.menu {
+  position: absolute;
+
+  top: 2rem;
+  right: 3rem;
+
+  height: 2rem;
+  width: 2rem;
+
+  background-color: white;
+
+  z-index: 10;
 }
