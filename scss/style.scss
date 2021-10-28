@@ -9,33 +9,45 @@ html {
 }
 
 body {
-  background-color: $pesca-chiaro;
+  background-color: $cultured;
   font-family: $font;
 }
 
-// section {
-//   height: 100vh;
-// }
+section {
+  height: 100vh;
+}
 
 h1 {
-  color: $cobalto;
+  color: $charcoal;
   font-size: 8vw;
   line-height: 7vw;
 }
 h2 {
-  color: $bianco;
+  color: $light-salmon;
   font-size: 4vw;
   line-height: 4vw;
 }
 h3 {
-  color: $bianco;
+  color: $light-salmon;
   font-size: 3vw;
   line-height: 4vw;
 }
 h4 {
-  color: $bianco;
+  color: $light-salmon;
   font-size: 2vw;
   line-height: 4vw;
+}
+
+a {
+  text-decoration: none;
+  color: $charcoal;
+  font-weight: 700;
+  opacity: 1;
+}
+
+a:hover {
+  color: $charcoal;
+  opacity: 0.5;
 }
 
 .left {
@@ -76,13 +88,23 @@ h4 {
   color: $grigio-scuro;
 }
 
-.data {
-  width: 30%;
-  padding: 60px;
+.center {
+  text-align: center;
+
+  p {
+    font-size: 1.5vw;
+    color: $grigio-scuro;
+    padding-top: 20px;
+  }
 }
-.event {
-  width: 70%;
-  padding: 60px;
+
+.col-3 {
+  width: 33%;
+  p {
+    a {
+      font-weight: 400;
+    }
+  }
 }
 
 @import "navmenu";

@@ -37,22 +37,9 @@ function activateNavigation() {
 
 activateNavigation();
 
-$(function () {
-  var current = 1,
-    $slides = $(".slide");
-  slidesNumber = $slides.length;
-
-  $(".btn").on("click", function () {
-    var next = current + 1 <= slidesNumber ? current + 1 : 1,
-      $nextSlide = $(".slide:nth-child(" + next + ")"),
-      $currentSlide = $(".slide:nth-child(" + current + ")");
-
-    $slides.css("z-index", 4);
-
-    $nextSlide.css("z-index", 6).addClass("visible");
-
-    $currentSlide.css("z-index", 5).removeClass("visible");
-
-    current = next;
-  });
-});
+let box = document.querySelectorAll(".box");
+box.forEach((popup) =>
+  popup.addEventListener("click", () => {
+    popup.classList.toggle("active");
+  })
+);
