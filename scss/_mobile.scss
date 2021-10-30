@@ -1,5 +1,22 @@
 @media only screen and (max-width: 400px) {
-  .content-desktop {
-    display: none;
+  .screen {
+    .nav-computer {
+      .monitor {
+        .top-bar {
+          .screen-folder {
+            .content-desktop {
+              display: none;
+            }
+            .content-mobile {
+              display: block;
+              img {
+                width: 100px;
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
