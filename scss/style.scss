@@ -91,10 +91,13 @@ a:hover {
 .center {
   text-align: center;
 
+  h2 {
+    padding-bottom: 20px;
+  }
+
   p {
     font-size: 1.5vw;
     color: $grigio-scuro;
-    padding-top: 20px;
   }
 }
 
