@@ -23,11 +23,15 @@
         }
         .screen-folder {
           background-color: $bianco;
-          max-width: 900px;
-
-          img {
-            width: 200px;
-            height: auto;
+          max-width: 820px;
+          .content-desktop {
+            img {
+              width: 200px;
+              height: auto;
+            }
+          }
+          .content-mobile {
+            display: none;
           }
         }
       }
@@ -39,23 +43,12 @@
 
       .icon {
         padding-top: 10px;
-        #home {
-          width: 30px;
-          margin: 0 10px;
-        }
-        #email {
-          width: 30px;
-          margin: 0 10px;
-        }
-        #chrome {
-          width: 30px;
-          margin: 0 10px;
-        }
-
+        #home,
+        #email,
+        #chrome,
         #photoshop,
         #illustrator {
-          width: 30px;
-          margin: 0 10px;
+          @include set-icon;
         }
 
         #photoshop:hover,
@@ -65,29 +58,6 @@
           transform-origin: bottom;
           animation-name: bounce;
           animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
-        }
-        @keyframes bounce {
-          0% {
-            transform: scale(1, 1) translateY(0);
-          }
-          10% {
-            transform: scale(1.1, 0.9) translateY(0);
-          }
-          30% {
-            transform: scale(0.9, 1.1) translateY(-20px);
-          }
-          50% {
-            transform: scale(1.05, 0.95) translateY(0);
-          }
-          57% {
-            transform: scale(1, 1) translateY(-4px);
-          }
-          64% {
-            transform: scale(1, 1) translateY(0);
-          }
-          100% {
-            transform: scale(1, 1) translateY(0);
-          }
         }
       }
     }
