@@ -43,3 +43,8 @@ box.forEach((popup) =>
     popup.classList.toggle("active");
   })
 );
+
+function myFunction() {
+  var popup = document.getElementById("popup-folder");
+  popup.classList.toggle("show");
+}

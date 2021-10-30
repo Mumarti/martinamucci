@@ -35,6 +35,10 @@
           #illustrator {
             @include set-icon-mobile;
           }
+          #photoshop:hover,
+          #illustrator:hover {
+            animation: none;
+          }
         }
       }
     }
