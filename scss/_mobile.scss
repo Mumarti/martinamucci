@@ -2,7 +2,14 @@
   .screen {
     .nav-computer {
       .monitor {
+        padding: 20px;
         .top-bar {
+          padding-top: 10px;
+          border-radius: 10px 10px 0 0;
+          .circle {
+            height: 10px;
+            width: 10px;
+          }
           .screen-folder {
             .content-desktop {
               display: none;
@@ -14,6 +21,19 @@
                 height: auto;
               }
             }
+          }
+        }
+      }
+
+      .icon-nav {
+        .icon {
+          padding-top: 10px;
+          #home,
+          #email,
+          #chrome,
+          #photoshop,
+          #illustrator {
+            @include set-icon-mobile;
           }
         }
       }
