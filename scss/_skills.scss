@@ -1,0 +1,27 @@
+.screen {
+  display: flex;
+  justify-content: center;
+  .nav-computer {
+    background-color: $charcoal;
+    padding-bottom: 10px;
+    border-radius: 25px 25px 20px 20px;
+    .monitor {
+      background-color: $grigio-chiaro;
+      padding: 40px;
+      border-radius: 20px 20px 0 0;
+      .screen-folder {
+        background-color: $bianco;
+        border-top: 40px solid $charcoal;
+        border-radius: 20px 20px 0 0;
+        max-width: 900px;
+        img {
+          width: 200px;
+          height: auto;
+        }
+      }
+    }
+    img {
+      width: 50px;
+    }
+  }
+}
