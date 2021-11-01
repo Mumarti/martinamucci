@@ -73,9 +73,15 @@ a:hover {
   float: right;
   width: 50%;
   height: 100vh;
-
-  h3 {
-    padding-left: 60px;
+  .immagine-centro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 70%;
+      border-radius: 50%;
+    }
   }
 }
 
@@ -114,4 +120,5 @@ a:hover {
 @import "timeline";
 @import "skills";
 @import "card";
+@import "contact";
 @import "mobile";

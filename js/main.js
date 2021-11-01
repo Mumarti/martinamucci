@@ -40,15 +40,3 @@ function activateNavigation() {
 activateNavigation();
 
 //section-work
-function splitScroll() {
-  const controller = new ScrollMagic.Controller();
-  new ScrollMagic.Scene({
-    duration: "100%", //man mano che aumentano i progetto, aumentare la %
-    triggerElement: ".work-section-title",
-    triggerHook: 0,
-  })
-    .setPin(".work-section-title")
-    .addIndicators()
-    .addTo(controller);
-}
-splitScroll();
