@@ -1,0 +1,41 @@
+.work {
+  height: 200vh; //man mano che aumentano i progetti, aumentare l'altezza
+  display: flex;
+  .work-section-title {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 !important;
+  }
+  .work-pages {
+    width: 50%;
+
+    div {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        width: 80%;
+        font-size: 18px;
+        line-height: 30px;
+        color: $grigio-chiaro;
+      }
+    }
+
+    div:nth-child(1) {
+      background-color: $charcoal;
+    }
+    div:nth-child(2) {
+      background-color: $unbleached-silk;
+    }
+  }
+}

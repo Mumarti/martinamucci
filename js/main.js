@@ -1,3 +1,5 @@
+//navitagion menu
+
 function activateNavigation() {
   const sections = document.querySelectorAll("section");
   const navContainer = document.createElement("nav");
@@ -37,14 +39,16 @@ function activateNavigation() {
 
 activateNavigation();
 
-let box = document.querySelectorAll(".box");
-box.forEach((popup) =>
-  popup.addEventListener("click", () => {
-    popup.classList.toggle("active");
+//section-work
+function splitScroll() {
+  const controller = new ScrollMagic.Controller();
+  new ScrollMagic.Scene({
+    duration: "100%", //man mano che aumentano i progetto, aumentare la %
+    triggerElement: ".work-section-title",
+    triggerHook: 0,
   })
-);
-
-function myFunction() {
-  var popup = document.getElementById("popup-folder");
-  popup.classList.toggle("show");
+    .setPin(".work-section-title")
+    .addIndicators()
+    .addTo(controller);
 }
+splitScroll();
