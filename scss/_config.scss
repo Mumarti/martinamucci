@@ -16,6 +16,12 @@ $cultured: #f8f7f5;
 $isabelline: #f6f0ebff;
 $unbleached-silk: #fddfd2ff;
 
+$card-color: linear-gradient(
+  hsla(0, 0%, 0%, 0),
+  hsla(20, 0%, 0%, 0.3) 20%,
+  hsla(0, 0%, 0%, 1)
+);
+
 /*End-colors*/
 $nav-gap: 15px;
 

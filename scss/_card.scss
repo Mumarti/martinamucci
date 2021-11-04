@@ -1,0 +1,37 @@
+.work {
+  display: flex;
+  justify-content: center;
+
+  .card {
+    float: left;
+    max-width: 33%;
+    color: $grigio-chiaro;
+    background-color: $charcoal-light;
+    background-size: cover;
+    padding: 15rem 0 0 0;
+    margin: 20px;
+
+    .card-content {
+      padding: 1.5em;
+      background: $card-color;
+
+      .card-title {
+        position: relative;
+        width: max-content;
+      }
+
+      .card-title::after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background: $charcoal;
+      }
+    }
+  }
+  .card:first-child {
+    background-image: url(../img/project/maddalenare-mobile.png);
+  }
+}
