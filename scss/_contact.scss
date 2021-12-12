@@ -1,26 +1,20 @@
-.contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  .social {
-    .container-social {
-      .col-3 {
-        float: left;
-        width: 33%;
-        height: 50px;
-        a {
-          display: flex;
-          justify-content: center;
-          img {
-            padding-top: 20px;
-            width: 15%;
-          }
+.social {
+  .container-social {
+    .col-3 {
+      float: left;
+      width: 33%;
+      height: 50px;
+      a {
+        display: flex;
+        justify-content: center;
+        img {
+          padding-top: 20px;
+          width: 15%;
         }
-        a:hover {
-          color: $charcoal;
-          opacity: 0.5;
-        }
+      }
+      a:hover {
+        color: $charcoal;
+        opacity: 0.5;
       }
     }
   }

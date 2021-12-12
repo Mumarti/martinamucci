@@ -88,6 +88,20 @@ a {
   color: $grigio-scuro;
 }
 
+.section__height {
+  height: 100vh;
+}
+
+.section_height_2 {
+  height: 100vh;
+}
+
+.centrato {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .center {
   text-align: center;
 
