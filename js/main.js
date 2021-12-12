@@ -1,42 +1,34 @@
-//navitagion menu
+// navitagion menu
+//Scroll + active link
 
-function activateNavigation() {
-  const sections = document.querySelectorAll("section");
-  const navContainer = document.createElement("nav");
-  const navItems = Array.from(sections).map((section) => {
-    return `
-    <div class="nav-item" data-for-section="${section.id}">
-        <a href="#${section.id}" class="nav-link"></a>
-        <span class="nav-label">${section.dataset.label}</span>
-    </div>
-           `;
-  });
+const sections = document.querySelectorAll("section[id]");
 
-  navContainer.classList.add("nav");
-  navContainer.innerHTML = navItems.join("");
+function scrollActive() {
+  const scrollY = window.pageYOffset;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      document.querySelectorAll(".nav-link").forEach((navLink) => {
-        navLink.classList.remove("nav-link-selected");
-      });
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight,
+      sectionTop = current.offsetTop - 50,
+      sectionId = current.getAttribute("id");
 
-      const visibleSection = entries.filter((entry) => entry.isIntersecting)[0];
-
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document
-        .querySelector(
-          `.nav-item[data-for-section="${visibleSection.target.id}"] .nav-link`
-        )
-        .classList.add("nav-link-selected");
-    },
-    { threshold: 0.5 }
-  );
-
-  sections.forEach((section) => observer.observe(section));
-
-  document.body.appendChild(navContainer);
+        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .classList.add("active-link");
+    } else {
+      document
+        .querySelector(".nav__menu a[href*=" + sectionId + "]")
+        .classList.remove("active-link");
+    }
+  });
 }
+window.addEventListener("scroll", scrollActive);
 
-activateNavigation();
+//modifica header
 
-//section-work
+function scrollHeader() {
+  const header = document.getElementById("header");
+  if (this.scrollY >= 80) header.classList.add("scroll-header");
+  else header.classList.remove("scroll-header");
+}
+window.addEventListener("scroll", scrollHeader);

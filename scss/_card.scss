@@ -1,37 +1,63 @@
-.work {
+.container {
   display: flex;
   justify-content: center;
-
-  .card {
-    float: left;
-    max-width: 33%;
-    color: $grigio-chiaro;
-    background-color: $charcoal-light;
-    background-size: cover;
-    padding: 15rem 0 0 0;
-    margin: 20px;
-
-    .card-content {
-      padding: 1.5em;
-      background: $card-color;
-
-      .card-title {
-        position: relative;
-        width: max-content;
+  align-items: center;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 80px;
+    align-items: center;
+    .card {
+      background-color: $bianco;
+      border: none;
+      box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+      border-radius: 20px;
+      text-align: center;
+      width: 250px;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(5px);
+      box-shadow: 2px 2px 26px 0px rgba(0, 0, 0, 0.3);
+    }
+    img {
+      width: 100%;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      padding: 20px;
+    }
+    i {
+      width: 200px;
+    }
+    .text {
+      padding: 0 20px 20px;
+      h4 {
+        text-transform: uppercase;
       }
-
-      .card-title::after {
-        content: "";
-        position: absolute;
-        height: 4px;
+      h5 {
+        color: $charcoal;
+      }
+      a {
+        display: block;
+        background-color: $charcoal;
+        border-radius: 20px;
+        color: $bianco;
+        padding: 10px;
         width: 100%;
-        left: 0;
-        bottom: 0;
-        background: $charcoal;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      a:hover {
+        color: $bianco;
+        font-weight: 600;
+        background-color: $light-salmon;
+        transition: 0.4s;
+      }
+      p {
+        padding: 20px 0;
+        color: $grigio-scuro;
       }
     }
-  }
-  .card:first-child {
-    background-image: url(../img/project/maddalenare-mobile.png);
   }
 }

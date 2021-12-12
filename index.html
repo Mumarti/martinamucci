@@ -21,7 +21,43 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <section id="about" data-label="About">
+    <header class="header" id="header">
+      <nav class="nav">
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#about" class="nav__link">
+                <i class="far fa-user nav__icon"></i>
+                <span class="nav__name">About</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">
+                <i class="fas fa-tasks nav__icon"></i>
+                <span class="nav__name">Skills</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#work" class="nav__link">
+                <i class="fas fa-briefcase nav__icon"></i>
+                <span class="nav__name">Work</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">
+                <i class="fas fa-comments nav__icon"></i>
+                <span class="nav__name">Contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="section section_about" id="about">
       <div class="left">
         <div class="presentation">
           <h3>Hello I'm</h3>
@@ -41,7 +77,7 @@
         </div>
       </div>
     </section>
-    <section id="skills" data-label="Skills">
+    <section class="section section__height" id="skills">
       <div class="center">
         <h2>Skills</h2>
       </div>
@@ -92,29 +128,43 @@
         </div>
       </div>
     </section>
-    <section id="work" data-label="Work">
+    <section class="section section__height" id="work">
       <div class="center">
         <h2>Work</h2>
       </div>
-      <div class="work">
-        <div class="card">
-          <div class="card-content">
-            <h2 class="card-title">Maddalena Re</h2>
-            <p class="card-body">Collage Artist - Personal Website</p>
-            <a href="#" class="button">Watch more</a>
-          </div>
+      <div class="container">
+        <div class="grid">
+          <div class="card">
+            <img src="img/project/maddalena-re-logo.png" alt="" />
+            <div class="text">
+              <h4>Maddalena Re</h4>
+              <h5>Collage Artist</h5>
+              <p>Wordpress Website</p>
+              <a href="">View More</a>
+            </div>
           </div>
           <div class="card">
-            <div class="card-content">
-            <h2 class="card-title">Maddalena Re</h2>
-            <p class="card-body">Collage Artist - Personal Website</p>
-            <a href="#" class="button">Watch more</a>
+            <img src="img/project/don-jorge-logo.png" alt="" />
+            <div class="text">
+              <h4>Don Jorge</h4>
+              <h5>Ristorante</h5>
+              <p>Wordpress Website</p>
+              <a href="">View More</a>
+            </div>
           </div>
+          <div class="card">
+            <img src="img/icon/send.png" alt="" />
+            <div class="text">
+              <h4>What Next?</h4>
+              <h5>Lorem ipsum</h5>
+              <p>Lorem Ipsum</p>
+              <a href="#contact">Contact me!</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="contact" id="contact" data-label="Contact">
+    <section class="section section__height contact" id="contact">
       <div class="center">
         <h2>Get in touch</h2>
         <p>

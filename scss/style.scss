@@ -13,9 +13,9 @@ body {
   font-family: $font;
 }
 
-section {
-  height: 100vh;
-}
+// section {
+//   height: 100vh;
+// }
 
 h1 {
   color: $charcoal;
@@ -41,13 +41,7 @@ h4 {
 a {
   text-decoration: none;
   color: $charcoal;
-  font-weight: 700;
   opacity: 1;
-}
-
-a:hover {
-  color: $charcoal;
-  opacity: 0.5;
 }
 
 .left {
