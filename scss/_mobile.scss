@@ -9,29 +9,42 @@
     line-height: 10vw;
   }
   h2 {
-    font-size: 7vw;
-    line-height: 7vw;
+    font-size: 10vw;
+    line-height: 10vw;
   }
   h3 {
     font-size: 8vw;
     line-height: 9vw;
   }
   h4 {
-    font-size: 2.5vw;
-    line-height: 5vw;
+    font-size: 3vw;
+    line-height: 5.5vw;
   }
 
   .left {
     width: 100%;
     height: fit-content;
+
+    .presentation {
+      padding-top: 50px;
+    }
+
+    .description {
+      padding-left: 60px;
+      padding-top: 20px;
+      padding-right: 60px;
+      font-size: 16px;
+      line-height: 32px;
+      color: $grigio-scuro;
+    }
   }
   .right {
     height: fit-content;
     width: 100%;
     .immagine-centro {
-      height: 70vh;
+      height: 45vh;
       img {
-        width: 50%;
+        width: 70%;
       }
     }
   }
@@ -68,10 +81,16 @@
 }
 
 @media only screen and (max-width: 500px) {
+  .section__height {
+    height: fit-content;
+    padding: 55px 0;
+  }
+
   .screen {
     .nav-computer {
       .monitor {
         padding: 30px;
+        // padding: 20px 100px;
         .top-bar {
           padding-top: 10px;
           border-radius: 10px 10px 0 0;
@@ -85,9 +104,17 @@
             }
             .content-mobile {
               display: block;
-              img {
-                width: 100px;
-                height: auto;
+              width: 300px;
+              ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                li {
+                  display: flex;
+                  justify-content: center;
+                  font-size: 35px;
+                  padding: 5px;
+                  color: $light-salmon;
+                }
               }
             }
           }
@@ -117,12 +144,37 @@
       grid-template-columns: repeat(1, 1fr);
       .card {
         text-align: center;
+        img {
+          width: 50%;
+          padding: 5px;
+        }
       }
     }
   }
   .nav__list {
     justify-content: center;
     column-gap: 3rem;
+  }
+
+  #contact {
+    .center {
+      p {
+        font-size: 6vw;
+      }
+    }
+  }
+
+  .social {
+    .container-social {
+      .col-3 {
+        a {
+          img {
+            padding-top: 20px;
+            width: 35%;
+          }
+        }
+      }
+    }
   }
 }
 
