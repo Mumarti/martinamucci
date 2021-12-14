@@ -5,6 +5,11 @@
     background-color: $charcoal;
     padding-bottom: 10px;
     border-radius: 25px 25px 20px 20px;
+    .container-circle {
+      .circle-photo {
+        display: none;
+      }
+    }
     .monitor {
       background-color: $charcoal-light;
       padding: 40px;
@@ -60,6 +65,9 @@
           animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
         }
       }
+    }
+    .icon-nav-mobile {
+      display: none;
     }
   }
 }
