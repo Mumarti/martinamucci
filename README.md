@@ -1,3 +1,4 @@
 # martinamucci
 
-Portfolio di Martina Mucci
+Sito web personale di Martina Mucci
+Progetto Super guida HTML e CSS - START2IMPACT
