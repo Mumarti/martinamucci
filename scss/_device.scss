@@ -319,11 +319,6 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .centrato_2 {
-    display: block;
-    padding-top: 60px;
-  }
-
   .container {
     .grid {
       grid-template-columns: repeat(1, 1fr);
@@ -359,5 +354,12 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .centrato_2 {
+    display: block;
+    padding-top: 60px;
   }
 }
