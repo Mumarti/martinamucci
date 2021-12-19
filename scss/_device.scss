@@ -225,7 +225,8 @@
   }
 
   .centrato {
-    display: block;
+    display: flex;
+    justify-content: center;
   }
 
   .screen {
