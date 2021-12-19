@@ -26,6 +26,7 @@ $card-color: linear-gradient(
 /*End-colors*/
 $nav-gap: 15px;
 
+//width and margin icon fake desktop
 @mixin set-icon {
   width: 30px;
   margin: 0 10px;
@@ -36,6 +37,7 @@ $nav-gap: 15px;
   margin: 0 10px;
 }
 
+//animation icon (illustrator and photoshop)
 @keyframes bounce {
   0% {
     transform: scale(1, 1) translateY(0);

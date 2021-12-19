@@ -75,10 +75,10 @@
   .screen {
     .nav-computer {
       padding: 10px;
-      .container-circle {
+      .container-detail {
         display: flex;
         justify-content: center;
-        .circle-photo {
+        .detail-mobile {
           display: block;
           height: 25px;
           width: 25px;
@@ -230,10 +230,10 @@
     .nav-computer {
       padding: 10px;
       max-width: 300px;
-      .container-circle {
+      .container-detail {
         display: flex;
         justify-content: center;
-        .circle-photo {
+        .detail-mobile {
           display: block;
           height: 3px;
           width: 65px;

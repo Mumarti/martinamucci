@@ -1,3 +1,13 @@
+.center {
+  p {
+    a {
+      color: $light-salmon;
+    }
+    a:hover {
+      color: $charcoal;
+    }
+  }
+}
 .social {
   .container-social {
     .col-3 {
