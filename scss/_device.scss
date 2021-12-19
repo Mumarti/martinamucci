@@ -177,7 +177,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   h1 {
     font-size: 11vw;
     line-height: 10vw;
@@ -193,6 +193,7 @@
   h4 {
     font-size: 3.5vw;
     line-height: 5.5vw;
+    padding-right: 10px;
   }
 
   .left {
@@ -351,5 +352,12 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .centrato_2 {
+    display: block;
+    padding-top: 60px;
   }
 }
